@@ -1,3 +1,4 @@
+import { Tendencia } from './tendencias/models';
 import { Express } from 'express';
 import authRouter from './auth/router';
 import categoriesRouter from './categories/router';
@@ -8,6 +9,7 @@ import inventaryRouter  from './inventary/router';
 import productsoapRouter from './productsoap/router';
 import popularesRouter from './populares/router';
 import tendenciasRouter from './tendencias/router'
+import placesRouter from './places/router'
 
 const router = (app: Express) => {
     app.get("/", (req, res) => {
@@ -24,6 +26,6 @@ const router = (app: Express) => {
     app.use("/productsCat", productsoapRouter);
     app.use("/populares", popularesRouter);
     app.use("/tendencias", tendenciasRouter);
+    app.use("/places", placesRouter);
 }
-
 export default router;
