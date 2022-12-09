@@ -9,9 +9,6 @@ const list = async () => {
 
 const store = async (data: Category) => {
     validations.validateCategoryInput(data);
-
-    data.slug = (data.slug || data.name).split(' ').join('-');
-
     const model = await repository.store(data);
     return model;
 }

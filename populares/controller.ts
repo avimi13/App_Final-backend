@@ -1,5 +1,5 @@
 
-import { Recipe } from './interfaces';
+import { Popular } from './interfaces';
 import repository from './repositry';
 import validations from './validations';
 
@@ -19,7 +19,7 @@ const list = async (query: any) => {
 }
 
 
-const store = async (data: Recipe) => {
+const store = async (data: Popular) => {
     validations.validateRecipeInput(data);
 
     const model = await repository.store(data);
@@ -41,7 +41,7 @@ const deleteItem = async (id: string) => {
     return await repository.delete(id);
 }
 
-const update = async (id: string, data: Recipe) => {
+const update = async (id: string, data: Popular) => {
     // TODO: validar que los datos sean correctos
     const model = await repository.getOne(id);
     if (!model) throw new Error("Product not found");

@@ -1,4 +1,4 @@
-import { Creator } from './interfaces';
+import { Client } from './interfaces';
 import repository from './repositry';
 import validations from './validations';
 
@@ -18,7 +18,7 @@ const list = async (query: any) => {
 }
 
 
-const store = async (data: Creator) => {
+const store = async (data: Client) => {
     validations.validateCreatorInput(data);
 
     const model = await repository.store(data);
