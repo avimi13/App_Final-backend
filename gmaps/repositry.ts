@@ -38,5 +38,5 @@ export default {
     store,
     getOne,
     delete: deleteItem,
-    update
+    update,
 }

@@ -5,7 +5,9 @@ const MapsSchema = new mongoose.Schema({
     name: String,
     description: String,
     latitude: Number,
-    longitude: Number
+    longitude: Number,
+    latitudedelta: Number,
+    longitudedelta: Number,
 });
 
 export const Maps = mongoose.model('Maps', MapsSchema);
