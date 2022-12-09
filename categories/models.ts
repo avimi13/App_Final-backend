@@ -4,10 +4,9 @@ const categorySchema = new mongoose.Schema({
     id: String,
     name: String,
     description: String,
-    product: String,
+    products: String,
     date: Number,
-    image: String
-    
+    avatar: String
 });
 
 export const Category = mongoose.model('Category', categorySchema);

@@ -10,12 +10,8 @@ const store = async (data: ICategory) => {
   const id = ulid();
 
   const model = new Category({
+    ...data,
     id,
-    name: data.name,
-    description: data.description,
-    product: data.product,
-    date: data.date,
-    image: data.image,
   });
 
   await model.save();
