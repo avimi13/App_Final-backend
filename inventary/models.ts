@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const inventarySchema = new mongoose.Schema({
     id: String,
+    image: String,
     name: String,
     service: String,
     description: String,

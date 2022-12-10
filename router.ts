@@ -2,7 +2,6 @@ import { Tendencia } from "./tendencias/models";
 import { Express, Router } from "express";
 import authRouter from "./auth/router";
 import categoriesRouter from "./categories/router";
-import recipesRouter from "./recipes/router";
 import clientsRouter from "./usersclient/router";
 import gmapsRouter from "./gmaps/router";
 import inventaryRouter from "./inventary/router";
@@ -20,7 +19,6 @@ const router = (app: Express) => {
   });
   app.use("/auth", authRouter);
   app.use("/categories", categoriesRouter);
-  app.use("/recipes", recipesRouter);
   app.use("/client", clientsRouter);
   app.use("/gmaps", gmapsRouter);
   app.use("/inventary", inventaryRouter);

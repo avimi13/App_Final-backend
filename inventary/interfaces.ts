@@ -1,5 +1,6 @@
 export interface Inventary {
     id: string
+    image: string
     name: string
     service: number
     description: string
